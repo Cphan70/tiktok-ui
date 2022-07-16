@@ -1,11 +1,10 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
     --primary: #fe2c55;
     --black: #000;
     --text-color: #333;
-    --while: #fff;
+    --white: #fff;
 
     //defaule layout
     --default-layout-header-height: 60px;
@@ -24,7 +23,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'ProximaNova', sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed; // tối ưu tốc độ tải font trên mạng về hiển thị
@@ -40,6 +39,30 @@ input,
 a[href] {
     color: var(--text-color);
     text-decoration: none;
+}
+//Fonts emmbeded
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/font/Proxima-Nova-Regular.woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/font/ProximaNova-Semibold.woff2');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/font/Proxima-Nova-Bold.woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: SofiaPro;
+    src: url('/assets/font/sofiapro-semibold.otf');
+    font-weight: 700;
 }
 
 //custom tippy
