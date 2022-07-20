@@ -6,7 +6,6 @@ import {
     faEarthAsia,
     faCircleQuestion,
     faKeyboard,
-    faLanguage,
     faCircleUser,
     faBitcoinSign,
     faGear,
@@ -15,6 +14,7 @@ import {
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
+import config from '~/config';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Button from '~/components/Button';
@@ -22,6 +22,7 @@ import Menu from '~/components/Popper/Menu';
 import { MessageIcon, NotificationIcon, UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -30,7 +31,7 @@ const MENU_ITEMS = [
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
         title: 'Tiếng Việt',
         children: {
-            title: faLanguage,
+            title: 'language',
             data: [
                 {
                     type: 'language',
@@ -97,7 +98,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt="Logo" />
+                <Link to={config.routes.home} className={cx('logo-link')}>
+                    <img src={images.logo} alt="Logo" />
+                </Link>
 
                 <Search />
 

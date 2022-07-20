@@ -7,11 +7,11 @@
     min-width: 100px;
     padding: 9px 16px;
     border-radius: 4px;
-    background-color: var(--while);
+    background-color: var(--white);
     border: 1px solid transparent;
     user-select: none;
     cursor: pointer;
-    font-family: 'ProximaNova', sans-serif;
+    font-family: var(--font-family);
 
     + .wrapper {
         margin-left: 8px;
@@ -45,7 +45,7 @@
 
 .primary {
     background-color: var(--primary);
-    color: var(--while);
+    color: var(--white);
     border: none;
     &:hover {
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
